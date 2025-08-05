@@ -20,6 +20,7 @@ app.use(
   cors({
     credentials: true,
     origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   })
 );
 app.use(express.json());
@@ -36,7 +37,7 @@ const PORT = 8080 || process.env.PORT;
 app.get("/", (request, response) => {
   ///server to client
   response.json({
-    message: "Server is running " + PORT,
+    message: "Welcome to the Tanveer's Ecommerce Website",
   });
 });
 
